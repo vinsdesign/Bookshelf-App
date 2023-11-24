@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookshelf App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="row d-flex justify-content-center mt-5">
+      <div class="col-md-8 card">
+        <div class="card-body">
+          <h1
+            class="h1 pt-2 fw-bold d-flex justify-content-center align-items-center"
+          >
+            <ion-icon class="text-primary" name="book-outline"></ion-icon>
+            Bookshelf <span class="px-3 text-primary"> App.</span>
+          </h1>
+          <p class="pb-1 px-5 text-secondary text-center">
+            This bookshelf application is a web application that can enter book
+            data into shelves, move book data between shelves, and delete book
+            data from shelves.
+          </p>
+          <form class="row">
+            <div class="col-md-6 mb-3">
+              <label for="bookTitle" class="form-label fw-semibold"
+                >Book Title</label
+              >
+              <input
+                id="bookTitle"
+                type="text"
+                class="form-control"
+                placeholder="Book Title"
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="author" class="form-label fw-semibold">Author</label>
+              <input
+                type="text"
+                class="form-control"
+                id="author"
+                placeholder="Author"
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="publicationYear" class="form-label fw-semibold"
+                >Publication Year</label
+              >
+              <input id="publicationYear" type="date" class="form-control" />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="publisher" class="form-label fw-semibold"
+                >Publisher</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="publisher"
+                placeholder="publisher"
+              />
+            </div>
+            <div class="col-md-12 mb-3">
+              <label for="synopsis" class="form-label fw-semibold"
+                >Synopsis</label
+              >
+              <textarea class="form-control" id="synopsis" rows="3"></textarea>
+            </div>
+            <div class="pb-3 col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="finishedReading"
+                  required
+                />
+                <label class="form-check-label" for="finishedReading"
+                  >finished Reading
+                </label>
+              </div>
+            </div>
+            <div class="col-md-12 mb-3">
+              <button type="submit" class="btn btn-primary" style="width: 100%">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center gap-lg-3 mt-5">
+      <div class="col-md-8 card">
+        <div class="card-body">
+          <h1 class="h1 pt-2 fw-bold text-center">Search Your Book</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center gap-lg-3 mt-5">
+      <div class="col-md-4 card">
+        <div class="card-body">
+          <h1 class="h1 pt-2 fw-bold text-center">Not finished reading</h1>
+        </div>
+      </div>
+      <div class="col-md-4 card">
+        <div class="card-body">
+          <h1 class="h1 pt-2 fw-bold text-center">Finished reading</h1>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
