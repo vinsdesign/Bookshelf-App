@@ -27,13 +27,14 @@
             data into shelves, move book data between shelves, and delete book
             data from shelves.
           </p>
-          <form class="row">
+          <form class="row form" name="form" id="form">
             <div class="col-md-6 mb-3">
               <label for="bookTitle" class="form-label fw-semibold"
                 >Book Title</label
               >
               <input
                 id="bookTitle"
+                name="bookTitle"
                 type="text"
                 class="form-control"
                 placeholder="Book Title"
@@ -44,6 +45,7 @@
               <input
                 type="text"
                 class="form-control"
+                name="author"
                 id="author"
                 placeholder="Author"
               />
@@ -52,7 +54,13 @@
               <label for="publicationYear" class="form-label fw-semibold"
                 >Publication Year</label
               >
-              <input id="publicationYear" type="date" class="form-control" />
+              <input
+                id="publicationYear"
+                name="publicationYear"
+                type="number"
+                class="form-control"
+                placeholder="Publication Year"
+              />
             </div>
             <div class="col-md-6 mb-3">
               <label for="publisher" class="form-label fw-semibold"
@@ -60,6 +68,7 @@
               >
               <input
                 type="text"
+                name="publisher"
                 class="form-control"
                 id="publisher"
                 placeholder="publisher"
@@ -69,7 +78,12 @@
               <label for="synopsis" class="form-label fw-semibold"
                 >Synopsis</label
               >
-              <textarea class="form-control" id="synopsis" rows="3"></textarea>
+              <textarea
+                class="form-control"
+                name="synopsis"
+                id="synopsis"
+                rows="3"
+              ></textarea>
             </div>
             <div class="pb-3 col-12">
               <div class="form-check">
@@ -78,7 +92,6 @@
                   type="checkbox"
                   value=""
                   id="finishedReading"
-                  required
                 />
                 <label class="form-check-label" for="finishedReading"
                   >finished Reading
@@ -86,7 +99,14 @@
               </div>
             </div>
             <div class="col-md-12 mb-3">
-              <button type="submit" class="btn btn-primary" style="width: 100%">
+              <button
+                type="submit"
+                name="submit"
+                value="Submit"
+                id="submitButton"
+                class="btn btn-primary"
+                style="width: 100%"
+              >
                 Submit
               </button>
             </div>
@@ -94,27 +114,47 @@
         </div>
       </div>
     </div>
-
+    <!-- search -->
     <div class="row d-flex justify-content-center gap-lg-3 mt-4">
       <div class="col-md-8 card">
         <div class="card-body">
-          <h1 class="h1 pt-2 fw-bold text-center">Search Your Book</h1>
+          <h3 class="pt-2 fw-bold text-center">Search Your Book</h3>
+          <div class="input-group mb-3 d-flex">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="search your books"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-primary d-flex align-items-center gap-2"
+              type="submit"
+              name=""
+              id="submitSearch"
+            >
+              <ion-icon name="search-outline"></ion-icon> Search
+            </button>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="row d-flex justify-content-center gap-lg-3 mt-4">
+    <!-- not finished -->
+    <div class="row d-flex justify-content-center gap-4 mt-4">
       <div class="col-md-4 card">
         <div class="card-body">
           <h1 class="h1 pt-2 fw-bold text-center">Not finished reading</h1>
+          <div class="" id="notFinishedReading"></div>
         </div>
       </div>
       <div class="col-md-4 card">
         <div class="card-body">
           <h1 class="h1 pt-2 fw-bold text-center">Finished reading</h1>
+          <div class="" id="finishedReading"></div>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
